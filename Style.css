@@ -123,12 +123,12 @@
 	
 	&.left {
 		left: 0;
-		transform: translate3d(0,-50%,0) rotate(-135deg);
+		transform: translate3d(0,-50%,0) rotate(-90deg);
 	}
 
 	&.right {
 		right: 0;
-		transform: translate3d(0,-50%,0) rotate(45deg);
+		transform: translate3d(0,-50%,0) rotate(65deg);
 	}
 	
 	&:hover {
