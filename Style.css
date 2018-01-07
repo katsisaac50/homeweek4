@@ -102,7 +102,7 @@
 .rating > span {
   display: inline-block;
   position: relative;
-  width: 1.1em;
+  
 }
 .rating > span:hover:before,
 .rating > span:hover ~ span:before {
