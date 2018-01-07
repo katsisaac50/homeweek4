@@ -109,3 +109,27 @@
    content: "\2605";
    position: absolute;
 }
+
+.arrow {
+	position: absolute;
+	top: 50%;
+	width: 2rem;
+	height: 2rem;
+	background: transparent;
+	border-top: .4rem solid lightgray;
+	border-right: .4rem solid lightgray;
+	
+	&:hover {
+		border-top: .4rem solid orange;
+		border-right: .4rem solid orange;
+		box-shadow: .2rem -.2rem 0 black;
+
+		&.left {
+			left: -.2rem;
+		}
+
+		&.right {
+			right: -.2rem;
+		}
+	}
+}
