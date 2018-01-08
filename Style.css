@@ -101,7 +101,7 @@ body {
     grid-auto-rows: auto;
     grid-gap: 10px;
     grid-auto-flow: dense;
-    padding: 50px;
+    padding: 1.5%;
     height: 100%;
     border: solid 1px white;
     margin: 30px;
@@ -214,6 +214,7 @@ span {
 @media only screen and (min-width: 900px) {
     .container {
         margin: 150px;
+        padding: 50px;
     }
     .item:nth-child(1) {
         grid-row: 1/ 2;
