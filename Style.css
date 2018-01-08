@@ -1,147 +1,228 @@
-    body {
-        height: 100%;
-        padding: 50px;
-        border-style: solid;
-        border-width: 1px;
-        margin: 50px;
-        font: normal 16px/1.4 sans-serif;
-        background: white;
-        color: #222;
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box
+}
+
+h1 {
+    font-size: 5em;
+}
+
+h2 {
+    font-size: 3em;
+    color: #96958F;
+}
+
+.price {
+    font-size: 2em;
+}
+
+.aside {
+    float: right;
+    text-align: left;
+    color: #96958F;
+}
+
+#footer {
+    position: relative;
+    /* negative value of footer height */
+    height: 150px;
+    clear: both;
+    border-top: solid gray 1px;
+}
+
+.cart {
+    color: #88BC88;
+    font-size: 1.5em;
+}
+
+p.small {
+    line-height: 90%;
+}
+
+#triangle-topleft {
+    width: 0;
+    height: 0;
+    border-top: 60px solid #88BC88;
+    border-right: 60px solid transparent;
+}
+
+body {
+    font: normal 16px/1.4 sans-serif;
+    color: #222;
+    background: linear-gradient(-45deg, #EE7752, #E73C7E, #23A6D5, #23D5AB);
+    background-size: 400% 400%;
+    -webkit-animation: Gradient 15s ease infinite;
+    -moz-animation: Gradient 15s ease infinite;
+    animation: Gradient 15s ease infinite;
+}
+
+@-webkit-keyframes Gradient {
+    0% {
+        background-position: 0% 50%
     }
-    
-    h1 {
-        font-size: 5em;
+    50% {
+        background-position: 100% 50%
     }
-    
-    h2 {
-        font-size: 3em;
-        color: #96958F;
+    100% {
+        background-position: 0% 50%
     }
-    
-    .price {
-        font-size: 2em;
+}
+
+@-moz-keyframes Gradient {
+    0% {
+        background-position: 0% 50%
     }
-    
-    .aside {
-        float: right;
-        text-align: left;
-        text-align: left;
+    50% {
+        background-position: 100% 50%
     }
-    
-    #footer {
-        position: relative;
-        /* negative value of footer height */
-        height: 150px;
-        clear: both;
-        border-top: solid gray 1px;
+    100% {
+        background-position: 0% 50%
     }
-    
-    .cart {
-        color: #88BC88;
-        font-size: 2em;
+}
+
+@keyframes Gradient {
+    0% {
+        background-position: 0% 50%
     }
-    
-    p.small {
-        line-height: 90%;
+    50% {
+        background-position: 100% 50%
     }
-    
-    #triangle-topleft {
-        width: 0;
-        height: 0;
-        border-top: 60px solid #88BC88;
-        border-right: 60px solid transparent;
+    100% {
+        background-position: 0% 50%
     }
-    
-    .container {
-        display: grid;
-        grid-auto-flow: column;
-        grid-auto-columns: 1fr;
-        grid-auto-rows: auto;
-        grid-gap: 10px;
-        grid-auto-flow: dense;
-    }
-    
+}
+
+.container {
+    display: grid;
+    grid-auto-flow: column;
+    grid-auto-columns: 1fr;
+    grid-auto-rows: auto;
+    grid-gap: 10px;
+    grid-auto-flow: dense;
+    padding: 50px;
+    height: 100%;
+    border: solid 1px white;
+    margin: 150px;
+    overflow: auto;
+    background: white;
+}
+
+.item:nth-child(1+n) {}
+
+span {
+    content: "\2190";
+    position: relative;
+}
+
+.scale {
+    font-size: 1.7em;
+}
+
+.txt {
+    margin-top: 20px;
+    padding-left: 10px;
+    display: block;
+    color: black;
+}
+
+.arrow {
+    size: 120px;
+    position: relative;
+    right: 0px;
+    bottom: 65px;
+    color: white;
+    cursor: inherit;
+    font-size: 35px;
+    transform: scale(.5, 1);
+}
+
+.illustration img {
+    width: 100%;
+}
+
+.rating {
+    unicode-bidi: bidi-override;
+    direction: rtl;
+}
+
+.rating>span {
+    display: inline-block;
+    position: relative;
+}
+
+.rating>span:hover:before,
+.rating>span:hover~span:before {
+    content: "\2605";
+    position: absolute;
+}
+
+.item:nth-child(n+2):nth-child(-n+3) {
+    margin-left: 60px;
+}
+
+@media only screen and (min-width: 900px) {
     .item:nth-child(1) {
         grid-row: 1/ 2;
         grid-column: 1/ 13;
     }
-    
     .item:nth-child(n+2):nth-child(-n+3) {
         grid-column: span 6;
-        grid-row: span 5;
+        grid-row: span 2;
     }
-    
     .item:nth-child(n+4) {
         grid-row: 9/ 11;
         grid-column: 1 / 13;
     }
-    
-    span {
-        content: "\2190";
-        position: relative;
-    }
-    
-    .arrow {
-        size: 120px;
-        position: relative;
-        right: 0px;
-        bottom: 65px;
-        color: white;
-        cursor: inherit;
-        font-size: 35px;
-        transform: scale(.5, 1);
-    }
-    
-    .illustration img {
-        width: 100%;
-    }
+}
+
 .rating {
-  unicode-bidi: bidi-override;
-  direction: rtl;
-}
-.rating > span {
-  display: inline-block;
-  position: relative;
-  
-}
-.rating > span:hover:before,
-.rating > span:hover ~ span:before {
-   content: "\2605";
-   position: absolute;
+    unicode-bidi: bidi-override;
+    direction: rtl;
 }
 
-.arrow2 {
-	position: absolute;
-	top: 50%;
-	width: 2rem;
-	height: 2rem;
-	background: transparent;
-	border-top: .4rem solid black;
-	border-right: .4rem solid black;
-	box-shadow: 0 0 0 lightgray;
-	transition: all 200ms ease;
-	
-	&.left {
-		left: 0;
-		transform: translate3d(0,-50%,0) rotate(-90deg);
-	}
+.rating>span {
+    display: inline-block;
+    position: relative;
+}
 
-	&.right {
-		right: 0;
-		transform: translate3d(0,-50%,0) rotate(65deg);
-	}
-	
-	&:hover {
-		border-top: .4rem solid orange;
-		border-right: .4rem solid orange;
-		box-shadow: .2rem -.2rem 0 black;
+.rating>span:hover:before,
+.rating>span:hover~span:before {
+    content: "\2605";
+    position: absolute;
+}
 
-		&.left {
-			left: -.2rem;
-		}
+.demo-arrow-cls {
+    display: inline-block;
+    position: absolute;
+    width: 15px;
+    height: 15px;
+    background: transparent;
+    text-indent: -99px;
+    border-top: 1px solid #408080;
+    border-left: 1px solid #72B8B8;
+    transition: all .3s ease-in-out;
+    text-decoration: none;
+    color: transparent;
+}
 
-		&.right {
-			right: -.2rem;
-		}
-	}
+.demo-arrow-cls:hover {
+    border-color: #800000;
+    border-width: 2px;
+}
+
+.demo-arrow-cls:before {
+    display: block;
+    height: 100%;
+    width: 100%;
+    content: "";
+    transform: rotate(45deg);
+}
+
+.demo-arrow-cls.back {
+    transform: rotate(-45deg);
+}
+
+.demo-arrow-cls.forward {
+    transform: rotate(140deg);
 }
