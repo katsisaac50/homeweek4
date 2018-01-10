@@ -180,41 +180,25 @@ span {
     position: absolute;
 }
 
-.arrow-cls {
+
+#chevron-arrow-left {
+    position: relative;
     display: inline-block;
-    position: absolute;
+    border-right: 1px solid black;
+    border-bottom: 1px solid black;
     width: 15px;
     height: 15px;
-    background: transparent;
-    text-indent: -99px;
-    border-top: 1px solid #408080;
-    border-left: 1px solid #72B8B8;
-    transition: all .3s ease-in-out;
-    text-decoration: none;
-    color: transparent;
+    transform: rotate(-225deg);
 }
 
-.arrow-cls:hover {
-    border-color: #800000;
-    border-width: 2px;
-}
-
-.arrow-cls:before {
-    display: block;
-    height: 100%;
-    width: 100%;
-    content: "";
-    transform: rotate(45deg);
-}
-
-.arrow-cls.back {
+#chevron-arrow-right {
+    display: inline-block;
+    border-right: 1px solid black;
+    border-bottom: 1px solid black;
+    width: 15px;
+    height: 15px;
     transform: rotate(-45deg);
 }
-
-.arrow-cls.forward {
-    transform: rotate(140deg);
-}
-
 @media only screen and (min-width: 900px) {
     .container {
         margin: 150px;
