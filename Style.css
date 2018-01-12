@@ -45,7 +45,7 @@ p.small {
 #triangle-topleft {
     width: 0;
     height: 0;
-    border-top: 60px solid #88BC88;
+    border-top: 60px solid #dcdf29;
     border-right: 60px solid transparent;
     padding: 0.01em;
 }
